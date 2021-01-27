@@ -5,6 +5,7 @@ import "./ComNews.scss";
 import { BiCommentDetail } from "react-icons/bi";
 import { MdDateRange } from "react-icons/md";
 import { AiFillEye } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const ComNews = () => {
   const settings = {
@@ -50,7 +51,7 @@ const ComNews = () => {
                 </div>
                 <h5>{item.name}</h5>
                 <p>{item.inform}</p>
-                <button>Batafsil</button>
+                <Link to='/maqolalar'>Batafsil</Link>
               </div>
             </div>
           ))}

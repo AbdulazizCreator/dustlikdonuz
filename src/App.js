@@ -1,28 +1,29 @@
-import './App.scss';
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import Home from './pages/Home';
-import News from './components/News/News';
-import ComNews from './components/ComNews/ComNews';
-import Reklama from './components/Reklama/Reklama';
-import Media from './components/Media/Media';
-import Xizmatlar from './components/Xizmatlar/Xizmatlar';
-import Footer from './components/Footer/Footer';
+import "./App.scss";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import Login from "./pages/Login";
+import Adminpage from "./pages/Adminpage";
+import MoreInfoPage from "./pages/MoreInfoPage";
+import { ToastContainer } from "react-toastify";
+import AdminNews from "./components/AdminPage/AdminNews/AdminNews";
+import AdminMenu from "./components/AdminPage/AdminMenu/AdminMenu";
+import Notfound from "./components/Notfound";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
     <div className="App">
+      <ToastContainer />
       <BrowserRouter>
-        <Home />
-        <News />
-        <ComNews /> 
-        <Reklama />
-        <Media />
-        <Xizmatlar />
         <Switch>
-        <Footer />
-          <Route path='home' components={Home} />
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/login" component={Login} />
+          <PrivateRoute exact path="/admin" component={Adminpage} />
+          <PrivateRoute exact path="/admin/news" component={AdminNews} />
+          <PrivateRoute exact path="/admin/menu" component={AdminMenu} />
+          <Route exact path="/maqolalar" component={MoreInfoPage}></Route>
+          <Route component={Notfound} />
         </Switch>
-
       </BrowserRouter>
     </div>
   );

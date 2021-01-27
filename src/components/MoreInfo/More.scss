@@ -1,0 +1,61 @@
+#moreInfo {
+   background-color: #E5E5E5;
+   padding-top: 5vh;
+   .row {
+      .article-left {
+         h2 + p {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 37px;
+            color: #000000;
+            opacity: 0.8;
+         }
+         .comment {
+            margin-bottom: 2vh;
+            .commentImg {
+               width: 80px;
+               height: 80px;
+            }
+            .commentInput{
+               input {
+                  padding: 5px 0 52px 5px;
+                  background: #FFFFFF;
+                  border: 1px solid #D7D7D7;
+                  box-sizing: border-box;
+                  border-radius: 10px;
+                  &:focus {
+                     border: none;
+                     outline: none;
+                  }
+               }
+               padding-left: 30px;
+               p {
+                  font-size: 15px;
+               }
+               img {
+                  cursor: pointer;
+                  width: 12px;
+                  height: 12px;
+                  &:focus {
+                     background-color: red;
+                  }
+               }
+            }
+         }
+      }
+      .article-right {
+         span {
+            font-size: 15px;
+         }
+         .myGovUz {
+            background: #F2F2F2;
+            border-radius: 10px;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 1040px) {
+
+}

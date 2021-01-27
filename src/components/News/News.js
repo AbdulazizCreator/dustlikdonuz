@@ -5,7 +5,9 @@ import "./news.scss";
 import {BiCommentDetail} from 'react-icons/bi'
 import {MdDateRange} from 'react-icons/md'
 import {AiFillEye} from 'react-icons/ai'
-
+import { Link } from "react-router-dom";
+import { LightgalleryProvider } from "react-lightgallery";  
+import { LightgalleryItem } from "react-lightgallery";
 const News = () => {
   const settings = {
     slidesToShow: 3,
@@ -30,7 +32,12 @@ const News = () => {
         <Slider {...settings}>
           {data.map((item) => (
             <div className="newsItem" key={item.id}>
-              <img src={item.imgSrc} alt="" />
+              <LightgalleryProvider>
+                <LightgalleryItem src={item.imgSrc}>
+                  <img src={item.imgSrc} alt="" />
+                </LightgalleryItem>
+              </LightgalleryProvider>
+
               <div className="imgInform">
                 <div className="about d-flex justify-content-between">
                   <div>
@@ -49,7 +56,7 @@ const News = () => {
                 </div>
                 <h5>{item.name}</h5>
                 <p>{item.inform}</p>
-                <button>Batafsil</button>
+                <Link to="/maqolalar">Batafsil</Link>
               </div>
             </div>
           ))}

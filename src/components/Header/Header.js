@@ -1,18 +1,19 @@
 import { FiSearch } from "react-icons/fi";
 import { BiMenu, BiPhone } from "react-icons/bi";
-import {useSelector} from 'react-redux';
-import {useDispatch} from 'react-redux'
-import { toggle, toggle2 } from "../../actions";
-import Slider from "react-slick";
-import "./Header.scss";
-const Header = () => {
-  var settings = {
-    dots: true,
-  };
-  const open = useSelector(state => state.open);
-  const open2 = useSelector((state) => state.open2);
+import { connect, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { toggle } from "../../redux/actions";
+import { getMenus } from "../../redux/actions/adminMenuAction";
 
-  console.log(open);
+import "./Header.scss";
+import { useEffect } from "react";
+const Header = (props) => {
+  const open = useSelector((state) => state.open);
+
+  useEffect(() => {
+    props.getMenus();
+  }, [props]);
+
   const dispatch = useDispatch();
   return (
     <section id="navbar" className="p-relative">
@@ -20,7 +21,10 @@ const Header = () => {
         <div className="logo d-none d-lg-block">
           <a href="/">Dustlikdon.uz</a>
         </div>
-        <div className="logo d-block d-lg-none" onClick={() => dispatch(toggle())}>
+        <div
+          className="logo d-block d-lg-none"
+          onClick={() => dispatch(toggle())}
+        >
           <BiMenu />
         </div>
         <div className="search flex-grow-1 pl-5">
@@ -54,86 +58,24 @@ const Header = () => {
             <img src="images/Rectangle 6.png" alt="" />
           </a>
           <ul className="navbar-nav d-flex flex-lg-row flex-column vh-lg-100">
-            <li className="nav-item">
-              <a href="/" className="nav-link">
-                Jamiyat haqida
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="/" className="nav-link">
-                Struktura
-              </a>
-            </li>
-            <li className="nav-item">
-              <button className="nav-link" onClick={() => dispatch(toggle2())}>
-                Yangiliklar
-                <div className={"newsMenuCategories " + (open2 ? 'd-block' : 'd-none')}>
-                  <div>
-                    <a href="/">Lorem, ipsum.</a>
-                  </div>
-                  <div>
-                    <a href="/">Reprehenderit, doloremque!</a>
-                  </div>
-                  <div>
-                    <a href="/">Aliquid, autem.</a>
-                  </div>
-                </div>
-              </button>
-            </li>
-            <li className="nav-item">
-              <a href="/" className="nav-link">
-                Elektron murojaatlar
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="/" className="nav-link">
-                Interaktiv xizmatlar
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="/" className="nav-link">
-                Aloqa
-              </a>
-            </li>
+            {props.menus.map((item) => (
+              <li className="nav-item">
+                <a href="/" className="nav-link">
+                  {item.nameUz}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
-      </div>
-      <div className="carouselSlider">
-        <Slider {...settings}>
-          <div className="imgBox">
-            <img src="images/Rectangle 4.png" alt="" />
-            <div className="innerBox">
-              <img src="images/image 8.png" alt="" />
-              <h3>
-                O`ZBEKISTON RESPUBLIKASI "O`ZDONMAXSULOT" AKSIYADORLIK
-                KOMPANIYASI "DO`STLIKDONMAXSULOTLARI" AKSIYADORLIK JAMIYATI
-              </h3>
-            </div>
-          </div>
-          <div className="imgBox">
-            <img src="images/Rectangle 4.png" alt="" />
-            <div className="innerBox">
-              <img src="images/image 8.png" alt="" />
-              <h3>
-                O`ZBEKISTON RESPUBLIKASI "O`ZDONMAXSULOT" AKSIYADORLIK
-                KOMPANIYASI "DO`STLIKDONMAXSULOTLARI" AKSIYADORLIK JAMIYATI
-              </h3>
-            </div>
-          </div>
-          <div className="imgBox">
-            <img src="images/Rectangle 4.png" alt="" />
-            <div className="innerBox">
-              <img src="images/image 8.png" alt="" />
-              <h3>
-                O`ZBEKISTON RESPUBLIKASI "O`ZDONMAXSULOT" AKSIYADORLIK
-                KOMPANIYASI "DO`STLIKDONMAXSULOTLARI" AKSIYADORLIK JAMIYATI
-              </h3>
-            </div>
-          </div>
-        </Slider>
       </div>
     </section>
   );
 };
 
-export default Header;
+const mapStateToProps = (state) => {
+  return {
+    menus: state.menu.menus,
+  };
+};
+
+export default connect(mapStateToProps, { getMenus })(Header);

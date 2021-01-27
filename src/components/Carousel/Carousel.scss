@@ -1,0 +1,46 @@
+   .carouselSlider {
+      padding: 0px;   
+      background-color: #E5E5E5;
+      .slick-slide {
+         .imgBox {
+            position: relative;
+            .innerBox {
+               padding: 10vh 10vw;
+               position: absolute;
+               z-index: 12;
+               top: 0;
+               h3 {
+                  padding-top: 10vh;
+                  font-size: 3vw;
+                  color: white;
+                  text-align: center;
+               }
+            }
+            img {
+               margin: auto;
+            }
+         }
+      }
+      .slick-initialized { 
+         .slick-arrow:before {
+            width: 40px;
+            height: 40px;
+            font-size: 30px;
+         }
+         .slick-next {
+            z-index: 10;
+            right: 3vw;
+         }
+         .slick-prev {
+            left: 3vw;
+            z-index: 10;
+         }
+         .slick-dots {
+            bottom: 20px;
+            button::before {
+               font-size: 10px;
+               color: white;
+            }
+         }
+      }
+   }
