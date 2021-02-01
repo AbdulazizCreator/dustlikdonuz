@@ -8,6 +8,8 @@ import {AiFillEye} from 'react-icons/ai'
 import { Link } from "react-router-dom";
 import { LightgalleryProvider } from "react-lightgallery";  
 import { LightgalleryItem } from "react-lightgallery";
+
+
 const News = () => {
   const settings = {
     slidesToShow: 3,
@@ -33,8 +35,8 @@ const News = () => {
           {data.map((item) => (
             <div className="newsItem" key={item.id}>
               <LightgalleryProvider>
-                <LightgalleryItem src={item.imgSrc}>
-                  <img src={item.imgSrc} alt="" />
+                <LightgalleryItem group='fdsfa' src={item.imgSrc}>
+                  <img src={item.imgSrc} alt="jbhh" />
                 </LightgalleryItem>
               </LightgalleryProvider>
 

@@ -73,7 +73,7 @@ const MoreInfo = () => {
                   <h5 className="mb-0">{item.name}</h5>
                   <p className="mb-0">{item.comment}</p>
                   <div className="d-flex justify-content-between align-items-center">
-                    <img src="images/heart.svg" alt="" />
+                    <img src="/images/heart.svg" alt="" />
                     <p className="mb-0 flex-grow-1 pl-5 ">Javob qaytarish</p>
                     <p className="mb-0">{item.time}</p>
                   </div>

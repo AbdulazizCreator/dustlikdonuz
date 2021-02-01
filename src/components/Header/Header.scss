@@ -1,7 +1,7 @@
 #navbar {
-   background-color: #E5E5E5;
+   background-color: #FAFAFA;
    .topHeader {
-      height:80px;
+      height: 80px;
       display: flex;
       .logo {
          a {
@@ -14,13 +14,17 @@
       .search {
          form {
             position: relative;
-            i {
+            height: 40px;
+            margin-left: 60px;
+            img {
                position: absolute;
-               top: 8px;
-               left: 8px;
+               left: 16px;
+               top: 12px;
+               padding: 0;
             }
             input {
-               padding:0 28px;
+               width: 400px;
+               padding-left: 45px;
                background: #FFFFFF;
                box-shadow: 0px 0px 2px 2px rgba(204, 204, 204, 0.51);
                border-radius: 5px;
@@ -29,28 +33,89 @@
                &:focus {
                   outline: none;
                }
-               width: 75%;
             }
          }
       }
       .language {
+         select {
+            border: none;
+            outline: none;
+            border-style: none;
+            border-width: 0;
+            -webkit-appearance: none;
+            /*webkit browsers */
+            -moz-appearance: none;
+            /*Firefox */
+            appearance: none;
+            /* modern browsers */
+            border-radius: 0;
+            background-color: #FAFAFA;
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.8);
+            opacity: 0.7;
+            option {
+               outline: none;
+            }
+            &:hover {
+               outline: none;
+            }
+         }
          padding: 8px 30px;
+
       }
       .phone {
          border: 1px solid #008F48;
          box-sizing: border-box;
          border-radius: 10px;
          padding: 6px;
+         width: 180px;
+         display: flex;
+         align-items: center;
+         justify-content: space-around;
          span {
             color: #008F48;
+            font-size: 16px;
          }
       }
    }
    .header {
+      height: 70px;
       background-color: white;
       nav {
-         .nav-link {
-            color: black;
+         & > a {
+            position: relative;
+            img.innerImg {
+               position: absolute;
+               z-index: 100;
+               left: 10px;
+               top: 12px;
+            }
+         }
+         .nav-item {
+            .nav-link {
+               position: relative;
+               color: black;
+            }
+            .subMenus {
+               padding-top: 16px;
+               display: none;
+               position: absolute;
+               width: 200px;
+               table {
+                  background-color: #008F48;
+                  a {
+                     text-decoration: none;
+                     color: white;
+                  }
+               }
+            }
+            &:hover {
+               .subMenus {
+                  z-index: 100;
+                  display: block;
+               }
+            }
+
          }
          button {
             border: none;
@@ -85,15 +150,36 @@
    #navbar {
       .topHeader {
          padding: 0 1vw;
+         .search {
+            form {
+               margin-left: 10px;
+               input {
+                  width: 100%;
+                  padding-left: 45px;
+                  background: #FFFFFF;
+                  box-shadow: 0px 0px 2px 2px rgba(204, 204, 204, 0.51);
+                  border-radius: 5px;
+                  border: none;
+                  height: 40px;
+                  &:focus {
+                     outline: none;
+                  }
+               }
+            }
+         }
          .logo {
-            background-color: black;
-            svg {
+            background-color: #FAFAFA;
+            img {
                font-size: 40px;
-               color: white;
+               color: black;
+               height: 40px;
+               width: 40px;
+               
             }
          }
       }
       .header {
+         height: 0;
          nav {
             z-index: 15;
             top: 80px;
@@ -104,10 +190,12 @@
             background-color: black;
             height: calc(100vh - 80px);
             transition: display 1s;
-            .nav-link {
-               color: white;
-               text-align: center;
-               font-size: 30px;
+            .nav-item {
+               .nav-link {
+                  color: white;
+                  text-align: center;
+                  font-size: 30px;
+               }
             }
             button {
                background-color: black;

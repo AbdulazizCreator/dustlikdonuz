@@ -9,7 +9,7 @@ const AdminLayout = (props) => {
   const changeModal = () => {
     setOpen({ open: !open });
   };
-
+ 
   return (
     <div className="admin-layout">
       <div className="admin-navbar"></div>
@@ -56,9 +56,9 @@ const AdminLayout = (props) => {
               </Link>
             </li>
             <li className="nav-item mt-4">
-              <Link onClick={changeModal} className="nav-link text-white">
+              <button style={{border: 'none', background: 'none', }} onClick={changeModal} className="nav-link text-white">
                 Chiqish
-              </Link>
+              </button>
             </li>
           </ul>
           <Modal isOpen={open} toggle={changeModal}>
@@ -72,7 +72,7 @@ const AdminLayout = (props) => {
               >
                 Ha
               </Link>
-              <button className="btn btn-primary" type="button">
+              <button className="btn btn-primary" type="button" onClick={() => setOpen(false)}>
                 Yo'q
               </button>
             </ModalFooter>

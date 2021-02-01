@@ -1,4 +1,3 @@
-import "./App.scss";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Login from "./pages/Login";
@@ -9,6 +8,7 @@ import AdminNews from "./components/AdminPage/AdminNews/AdminNews";
 import AdminMenu from "./components/AdminPage/AdminMenu/AdminMenu";
 import Notfound from "./components/Notfound";
 import PrivateRoute from "./components/PrivateRoute";
+import CategoryPage from "./pages/CategoryPage";
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/category/:url" component={CategoryPage} />
           <Route exact path="/login" component={Login} />
           <PrivateRoute exact path="/admin" component={Adminpage} />
           <PrivateRoute exact path="/admin/news" component={AdminNews} />

@@ -12,13 +12,14 @@ export function updateState(data) {
 
 export function addMenu(data) {
   return function (dispatch) {
-    axios.post(API_PATH + "menu/all", data).then((res) => {
+    // dispatch(getMenus())
+    axios.post(API_PATH + "menu", data).then((res) => {
       if (res.data.success) {
         toast.success(res.data.message);
         dispatch(getAllMenus());
         dispatch({
           type: UPDATE_STATE,
-          payload: { modalOpen: false, selectedMenu: [] },
+          payload: { modalOpen: false, selectedMenu: {} },
         });
       } else {
         toast.error(res.data.message);
@@ -38,7 +39,7 @@ export function getMenus() {
 export function getAllMenus() {
   return function (dispatch) {
     axios.get(API_PATH + "menu/all").then((res) => {
-      dispatch(updateState({ menus: res.data.data }));
+      dispatch(updateState({ allMenus: res.data.data }));
     });
   };
 }
@@ -48,11 +49,19 @@ export function deleteMenu(id) {
     axios.delete(API_PATH + "menu/" + id).then((res) => {
       if (res.data.success) {
         toast.success(res.data.message);
-        dispatch(getMenus());
+        dispatch(getAllMenus());
         dispatch({ type: UPDATE_STATE, payload: { deleteModalOpen: false } });
       } else {
         toast.error("Xatolik");
       }
     });
   };
+}
+
+export function getSubMenus() {
+  return function (dispatch) {
+    axios.get(API_PATH + 'menu/subMenus').then(res => {
+      dispatch(updateState({subMenus: res.data.data}))
+    })
+  }
 }

@@ -1,7 +1,8 @@
 #reklama {
-   margin-top: 5vh;
+   background: linear-gradient(88.68deg, #FFFFFF 36.84%, #E7E7EB 74.27%), #FFFFFF;
    .reklama {
       display: flex;
+      box-shadow: 0px 2px 2px #DCDCDC;
       div {
          flex: 25%;
          max-width: 25%;

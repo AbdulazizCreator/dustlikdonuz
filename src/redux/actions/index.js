@@ -3,9 +3,3 @@ export const toggle = () => {
       type: 'toggle',
    }
 }
-
-export const toggle2 = () => {
-  return {
-    type: "toggle2",
-  };
-};

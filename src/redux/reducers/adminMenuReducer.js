@@ -8,6 +8,7 @@ const initialState = {
   selectedIdForDelete: null,
   selectedMenu: {},
   menus: [],
+  allMenus: [],
 };
 
 export const adminMenuReducer = (state = initialState, action) => {

@@ -1,6 +1,6 @@
 export const videoData = [
    {
-      imgSrc: "images/image 9.png",
+      imgSrc: "/images/image 9.png",
       id: 1,
       date: "16:48/12.11.20",
       view: 432,
@@ -9,7 +9,7 @@ export const videoData = [
       "kjfds khfdsh fhdjsf kf hk fdjfhkhkdhfd jkdfhsdkf hhkjhdf jk j djkfhkj hkhfdjkh jfdfh hkhfdj j hf dkshkkh hfkdsf khd",
    },
    {
-      imgSrc: "images/Rectangle 11.png",
+      imgSrc: "/images/Rectangle 11.png",
       id: 2,
       date: "16:48/12.11.20",
       view: 432,
@@ -19,7 +19,7 @@ export const videoData = [
   },
   {
     id: 3,
-    imgSrc: "images/Rectangle 18.png",
+    imgSrc: "/images/Rectangle 18.png",
     date: "16:48/12.11.20",
     view: 432,
     comments: 100,
@@ -27,7 +27,7 @@ export const videoData = [
       "kjfds khfdsh fhdjsf kf hk fdjfhkhkdhfd jkdfhsdkf hhkjhdf jk j djkfhkj hkhfdjkh jfdfh hkhfdj j hf dkshkkh hfkdsf khd",
   },
   {
-    imgSrc: "images/Rectangle 11.png",
+    imgSrc: "/images/Rectangle 11.png",
     id: 4,
     date: "16:48/12.11.20",
     view: 432,
@@ -36,7 +36,7 @@ export const videoData = [
       "kjfds khfdsh fhdjsf kf hk fdjfhkhkdhfd jkdfhsdkf hhkjhdf jk j djkfhkj hkhfdjkh jfdfh hkhfdj j hf dkshkkh hfkdsf khd",
   },
   {
-    imgSrc: "images/Rectangle 11.png",
+    imgSrc: "/images/Rectangle 11.png",
     id: 5,
     date: "16:48/12.11.20",
     view: 432,

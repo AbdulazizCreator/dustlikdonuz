@@ -10,9 +10,9 @@ const Carousel = () => {
      <div className="carouselSlider">
        <Slider {...settings}>
          <div className="imgBox">
-           <img src="images/Rectangle 4.png" alt="" />
+           <img src="/images/Rectangle 4.png" alt="" />
            <div className="innerBox">
-             <img src="images/image 8.png" alt="" />
+             <img src="/images/image 8.png" alt="" />
              <h3>
                O`ZBEKISTON RESPUBLIKASI "O`ZDONMAXSULOT" AKSIYADORLIK
                KOMPANIYASI "DO`STLIKDONMAXSULOTLARI" AKSIYADORLIK JAMIYATI
@@ -20,9 +20,9 @@ const Carousel = () => {
            </div>
          </div>
          <div className="imgBox">
-           <img src="images/Rectangle 4.png" alt="" />
+           <img src="/images/Rectangle 4.png" alt="" />
            <div className="innerBox">
-             <img src="images/image 8.png" alt="" />
+             <img src="/images/image 8.png" alt="" />
              <h3>
                O`ZBEKISTON RESPUBLIKASI "O`ZDONMAXSULOT" AKSIYADORLIK
                KOMPANIYASI "DO`STLIKDONMAXSULOTLARI" AKSIYADORLIK JAMIYATI
@@ -30,9 +30,9 @@ const Carousel = () => {
            </div>
          </div>
          <div className="imgBox">
-           <img src="images/Rectangle 4.png" alt="" />
+           <img src="/images/Rectangle 4.png" alt="" />
            <div className="innerBox">
-             <img src="images/image 8.png" alt="" />
+             <img src="/images/image 8.png" alt="" />
              <h3>
                O`ZBEKISTON RESPUBLIKASI "O`ZDONMAXSULOT" AKSIYADORLIK
                KOMPANIYASI "DO`STLIKDONMAXSULOTLARI" AKSIYADORLIK JAMIYATI

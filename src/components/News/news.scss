@@ -1,11 +1,15 @@
 #news {
    position: relative;
-   padding-top: 5vh;
-   background-color: #E5E5E5;
+   padding-top: 80px;
+   background-color: #AFAFAF;
+   h1 {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 100%;
+      /* identical to box height, or 32px */
+      color: #000000;
+   }
    .slick-initialized {
-      .slick-list {
-         background-color: #E5E5E5;
-      }
       .slick-next {
          top: -30px;
          z-index: 20;
@@ -29,9 +33,9 @@
       padding: 7px;
    }
    .newsItem {
-      border-radius: 10px;
-      background-color: white;
-      box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+      // border-radius: 10px;
+      // background-color: white;
+      // box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
       img {
          width: 100%;
          margin: auto;

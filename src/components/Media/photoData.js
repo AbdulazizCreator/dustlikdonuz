@@ -1,7 +1,7 @@
 export const photoData = [
   {
      id: 1,
-     imgSrc: "images/Rectangle 11.png",
+     imgSrc: "/images/Rectangle 11.png",
      date: "16:48/12.11.20",
      view: 432,
      comments: 100,
@@ -9,7 +9,7 @@ export const photoData = [
      "kjfds khfdsh fhdjsf kf hk fdjfhkhkdhfd jkdfhsdkf hhkjhdf jk j djkfhkj hkhfdjkh jfdfh hkhfdj j hf dkshkkh hfkdsf khd",
    },
    {
-   imgSrc: "images/Rectangle 18.png",
+   imgSrc: "/images/Rectangle 18.png",
     id: 2,
     date: "16:48/12.11.20",
     view: 432,
@@ -18,7 +18,7 @@ export const photoData = [
       "kjfds khfdsh fhdjsf kf hk fdjfhkhkdhfd jkdfhsdkf hhkjhdf jk j djkfhkj hkhfdjkh jfdfh hkhfdj j hf dkshkkh hfkdsf khd",
   },
   {
-    imgSrc: "images/image 9.png",
+    imgSrc: "/images/image 9.png",
     id: 3,
     date: "16:48/12.11.20",
     view: 432,
@@ -27,7 +27,7 @@ export const photoData = [
       "kjfds khfdsh fhdjsf kf hk fdjfhkhkdhfd jkdfhsdkf hhkjhdf jk j djkfhkj hkhfdjkh jfdfh hkhfdj j hf dkshkkh hfkdsf khd",
   },
   {
-    imgSrc: "images/Rectangle 11.png",
+    imgSrc: "/images/Rectangle 11.png",
     id: 4,
     date: "16:48/12.11.20",
     view: 432,
@@ -36,7 +36,7 @@ export const photoData = [
       "kjfds khfdsh fhdjsf kf hk fdjfhkhkdhfd jkdfhsdkf hhkjhdf jk j djkfhkj hkhfdjkh jfdfh hkhfdj j hf dkshkkh hfkdsf khd",
   },
   {
-    imgSrc: "images/Rectangle 11.png",
+    imgSrc: "/images/Rectangle 11.png",
     id: 5,
     date: "16:48/12.11.20",
     view: 432,
